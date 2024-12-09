@@ -94,7 +94,7 @@ hello
 
 <iframe
   src="assets/univariate.html"
-  width="900"
+  width="1000"
   height="600"
   frameborder="0"
 ></iframe>
