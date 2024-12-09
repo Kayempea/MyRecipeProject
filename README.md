@@ -95,20 +95,22 @@ In the graph below, we are examining the distribution of protein content as prop
 <iframe
   src="assets/univariate.html"
   width="800"
-  height="500"
+  height="450"
   frameborder="0"
 ></iframe>
 
 ### Bivariate Analysis
 
-In the graph below, we are examining the count of ratings for high and low-protein recipes. We see that the majority of our dataset is considered as low-protein recipes, which aligned with our univariate analysis. Another key observation to make is that although there are few high-protein recipes, they are all highly rated recipes.
+In the graph below, we are examining the count of ratings for high and low-protein recipes. We see that the majority of our dataset is considered as low-protein recipes, which aligns with our univariate analysis. Another key observation to make is that although there are few high-protein recipes, they are all highly rated recipes.
 
 <iframe
   src="assets/bivariate.html"
   width="800"
-  height="500"
+  height="450"
   frameborder="0"
 ></iframe>
+
+### Interesting Aggregates
 
 ---
 
