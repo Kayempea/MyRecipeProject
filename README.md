@@ -90,16 +90,25 @@ The first five observations of the cleaned dataset (without the `'tags'` and `'i
 
 ### Univariate Analysis
 
-hello
+In the graph below, we are examining the distribution of protein content as proportion of calories. The data follows a right-skewed distribution, indicating that most of the recipes in our dataset have very few proteins in them. Another way to interpret this result is as the proportion of protein increases, the count of recipes decreases, implying a negative correlation between the count of recipes and the proportion of protein.
 
 <iframe
   src="assets/univariate.html"
-  width="1300"
+  width="800"
   height="600"
   frameborder="0"
 ></iframe>
 
+### Bivariate Analysis
 
+In the graph below, we are examining 
+
+<iframe
+  src="assets/bivariate.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 ---
 
 ## Assessment of Missingness
