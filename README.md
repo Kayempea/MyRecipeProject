@@ -122,6 +122,11 @@ In this table, we are examining the averages across various variables for the tw
 ---
 
 ## Assessment of Missingness
+
+### NMAR Analysis
+
+### Missingness Dependency
+
 ---
 ## Hypothesis Testing
 ---
