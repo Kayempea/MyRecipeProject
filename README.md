@@ -94,7 +94,7 @@ In the graph below, we are examining the distribution of protein content as prop
 <iframe
   src="assets/univariate.html"
   width="800"
-  height="400"
+  height="500"
   frameborder="0"
 ></iframe>
 
@@ -104,7 +104,7 @@ In the graph below, we are examining
 <iframe
   src="assets/bivariate.html"
   width="800"
-  height="400"
+  height="500"
   frameborder="0"
 ></iframe>
 
