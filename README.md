@@ -95,7 +95,7 @@ In the graph below, we are examining the distribution of protein content as prop
 <iframe
   src="assets/univariate.html"
   width="800"
-  height="450"
+  height="420"
   frameborder="0"
 ></iframe>
 
@@ -106,11 +106,16 @@ In the graph below, we are examining the count of ratings for high and low-prote
 <iframe
   src="assets/bivariate.html"
   width="800"
-  height="450"
+  height="420"
   frameborder="0"
 ></iframe>
 
 ### Interesting Aggregates
+
+| high in protein   |   protein prop |   rating |   calories |   n_ingredients |   prep time |
+|:------------------|---------------:|---------:|-----------:|----------------:|------------:|
+| False             |       0.119236 |  4.68317 |    425.378 |         9.0219  |     106.482 |
+| True              |       0.408905 |  4.659   |    382.532 |         9.38522 |     108.736 |
 
 ---
 
