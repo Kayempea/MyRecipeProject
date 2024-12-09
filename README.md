@@ -1,5 +1,5 @@
 # Cooking Up Data: A Data Science Approach to Recipe Success
-Khoi Phan
+Conducted by Khoi Phan
 ## Introduction
 ## Data Cleaning and Exploratory Data Analysis
 ## Assessment of Missingness
