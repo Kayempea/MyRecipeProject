@@ -101,7 +101,7 @@ In the graph below, we are examining the distribution of protein content as prop
 
 ### Bivariate Analysis
 
-In the graph below, we are examining the count of ratings for high and low-protein recipes. We see that the majority of our dataset is considered as low-protein recipes, which aligns with our univariate analysis. Another key observation to make is that although there are few high-protein recipes, they are all highly rated recipes.
+In the graph below, we are examining the count of ratings for high and low-protein recipes. We see that the majority of our dataset is considered as low-protein recipes, which aligns with our univariate analysis. Another key observation to make is that although there are few high-protein recipes, they are all mostly highly rated recipes.
 
 <iframe
   src="assets/bivariate.html"
@@ -112,7 +112,9 @@ In the graph below, we are examining the count of ratings for high and low-prote
 
 ### Interesting Aggregates
 
-| high in protein   |   protein prop |   rating |   calories |   n_ingredients |   prep time |
+In this table, we are examining the averages across various variables for the two categorical group of recipes, high-protein and low-protein. We first see that the average proportion of protein make sense, being that 30% is the threshold for a recipe to be considered a high-protein recipe. In addition, there are no significant difference in the average rating, the average number of ingredients used and the average prep time across the two groups. But we do see that the average calories differs quite a bit, indicating that recipes with higher protein content are estimated to be less in calories, on average.
+
+| high in protein   |    average protein prop |   average rating |   average calories |  average n_ingredeients |  average prep time |
 |:------------------|---------------:|---------:|-----------:|----------------:|------------:|
 | False             |       0.119236 |  4.68317 |    425.378 |         9.0219  |     106.482 |
 | True              |       0.408905 |  4.659   |    382.532 |         9.38522 |     108.736 |
