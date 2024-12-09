@@ -5,6 +5,7 @@ By Khoi Phan (k8phan@ucsd.edu)
 ---
 
 ## Introduction
+
 The world is rapidly transitioning towards an increasingly "online" state, where digital technologies are transforming how we communicate, conduct business, access information, and interact with services across various aspects of life. One of many aspect being food; it is apparent that food is becoming a mainstream topic that society is constantly discussing about, either for fitness/health purposes or for hobbies like cooking and social media content creation.
 
 In this project, I will be focusing on two datasets relating to food recipes posted since 2008 on [food.com](https://www.food.com/). Specifically, I am trying to answer the question: **"How do the nutritional characteristics of a recipe, specifically its protein content, impact its average user rating?"**. 
@@ -41,6 +42,9 @@ For the second dataset, `ratings`, it has 731927 rows, representing the reviews 
 ---
 
 ## Data Cleaning and Exploratory Data Analysis
+
+### Data Cleaning
+
 Cleaning the data was a crucial step in ensuring the quality and reliability of my analyses. The raw data required significant preprocessing to make it suitable for modeling. Here's a detailed explanation of the steps I took:
 
 1. Merging Datasets
@@ -74,6 +78,9 @@ Cleaning the data was a crucial step in ensuring the quality and reliability of 
 	- Process: Removed columns such as `'id'`, `'contributor_id'`, and `'description'` that were not relevant to the project’s goals. Renamed columns to improve clarity (`'prep time'`, `'date submitted`', etc.) and reordered them for easier interpretation.
 	- Effect: Made the dataset more user-friendly for exploration and visualization.
 
+```py
+print(data.head().to_markdown(index=False))
+```
 ---
 
 ## Assessment of Missingness
