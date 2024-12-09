@@ -102,13 +102,6 @@ In the graph below, we are examining the distribution of protein content as prop
 ### Bivariate Analysis
 
 In the graph below, we are examining 
-
-<iframe
-  src="assets/bivariate.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
 ---
 
 ## Assessment of Missingness
