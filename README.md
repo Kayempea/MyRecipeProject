@@ -78,9 +78,20 @@ Cleaning the data was a crucial step in ensuring the quality and reliability of 
 	- Process: Removed columns such as `'id'`, `'contributor_id'`, and `'description'` that were not relevant to the project’s goals. Renamed columns to improve clarity (`'prep time'`, `'date submitted`', etc.) and reordered them for easier interpretation.
 	- Effect: Made the dataset more user-friendly for exploration and visualization.
 
-```py
-print(data.head().to_markdown(index=False))
-```
+The first five observations of the cleaned dataset (without the `'tags'` and `'ingredients'` columns for better visibility):
+
+|   recipe id | name                                 | date submitted      | date interacted     |   avg rating |   prep time |   n_steps |   n_ingredients |   calories |   total fat (PDV) |   sugar (PDV) |   sodium (PDV) |   protein (PDV) |   saturated fat (PDV) |   carbs (PDV) |   rating |   protein prop | high in protein   |
+|------------:|:-------------------------------------|:--------------------|:--------------------|-------------:|------------:|----------:|----------------:|-----------:|------------------:|--------------:|---------------:|----------------:|----------------------:|--------------:|---------:|---------------:|:------------------|
+|      333281 | 1 brownies in the world    best ever | 2008-10-27 00:00:00 | 2008-11-19 00:00:00 |            4 |          40 |        10 |               9 |      138.4 |                10 |            50 |              3 |               3 |                    19 |             6 |        4 |      0.0433526 | False             |
+|      453467 | 1 in canada chocolate chip cookies   | 2011-04-11 00:00:00 | 2012-01-26 00:00:00 |            5 |          45 |        12 |              11 |      595.1 |                46 |           211 |             22 |              13 |                    51 |            26 |        5 |      0.0436901 | False             |
+|      306168 | 412 broccoli casserole               | 2008-05-30 00:00:00 | 2008-12-31 00:00:00 |            5 |          40 |         6 |               9 |      194.8 |                20 |             6 |             32 |              22 |                    36 |             3 |        5 |      0.225873  | False             |
+|      306168 | 412 broccoli casserole               | 2008-05-30 00:00:00 | 2009-04-13 00:00:00 |            5 |          40 |         6 |               9 |      194.8 |                20 |             6 |             32 |              22 |                    36 |             3 |        5 |      0.225873  | False             |
+|      306168 | 412 broccoli casserole               | 2008-05-30 00:00:00 | 2013-08-02 00:00:00 |            5 |          40 |         6 |               9 |      194.8 |                20 |             6 |             32 |              22 |                    36 |             3 |        5 |      0.225873  | False             |
+
+### Univariate Analysis
+
+
+
 ---
 
 ## Assessment of Missingness
