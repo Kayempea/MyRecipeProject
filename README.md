@@ -8,7 +8,7 @@ By Khoi Phan (k8phan@ucsd.edu)
 
 The world is rapidly transitioning towards an increasingly "online" state, where digital technologies are transforming how we communicate, conduct business, access information, and interact with services across various aspects of life. One of many aspect being food; it is apparent that food is becoming a mainstream topic that society is constantly discussing about, either for fitness/health purposes or for hobbies like cooking and social media content creation.
 
-In this project, I will be focusing on two datasets relating to food recipes posted since 2008 on [food.com](https://www.food.com/). Specifically, I am trying to answer the question: **"How do the nutritional characteristics of a recipe, specifically its protein content, impact its average user rating?"**. 
+In this project, I will be focusing on two datasets relating to food recipes posted since 2008 on [food.com](https://www.food.com/). Specifically, I am trying to answer the question: **"How do the nutritional characteristics of a recipe, specifically its protein content, impact its average user rating?"**
 
 For food recipe creators and social media food content creators, understanding how nutritional content affects ratings can help them optimize their recipes and content for higher ratings and interactions. For consumers, this insight might help them make healthier choices based on users' feedbacks and ratings. Additionally, understanding the impact of protein content could potentially help promote healthier eating habits.
 
