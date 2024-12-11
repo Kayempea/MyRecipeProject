@@ -48,7 +48,7 @@ For the second dataset, `ratings`, it has 731927 rows, representing the reviews 
 Cleaning the data was a crucial step in ensuring the quality and reliability of my analyses. The raw data required significant preprocessing to make it suitable for modeling. Here's a detailed explanation of the steps I took:
 
 1. Merging Datasets
-	- Process: These datasets were merged using a left join on the recipe's ID.
+	- Process: Merged the two datasets using a left join on the recipe's ID.
 	- Effect: This merge enabled me to combine recipe-specific features with user interaction data, such as ratings.
 
 2. Handling Ratings of 0
@@ -56,7 +56,7 @@ Cleaning the data was a crucial step in ensuring the quality and reliability of 
 	- Effect: This prevented the use of erroneous ratings that could skew model performance and analysis.
 3. Feature Transformation
 	- Column: `'nutrition'`
-		- Process: Split the `'nutrition'` column into individual columns: `'calories'`, `'total fat (PDV)'`, `'sugar (PDV)'`, `'sodium (PDV)'`, `'protein (PDV)'`, `'saturated fat (PDV)'`, and `'carbs (PDV)'`.
+		- Process: Splited the `'nutrition'` column into individual columns: `'calories'`, `'total fat (PDV)'`, `'sugar (PDV)'`, `'sodium (PDV)'`, `'protein (PDV)'`, `'saturated fat (PDV)'`, and `'carbs (PDV)'`.
 		- Effect: Allowed for deeper nutritional analysis, specifically for deriving metrics like the proportion of calories from protein.
 	- Columns: `'tags'` and `'ingredients'`
 		- Process: Converted these columns from string format to lists.
@@ -124,6 +124,12 @@ In this table, we are examining the averages across various variables for the tw
 ## Assessment of Missingness
 
 ### NMAR Analysis
+
+In our dataset, it is possible that the column `review` contains missing values that could be considered **Not Missing At Random (NMAR)**. Users who had an extremely negative or extremely positive experience with a recipe might be more likely to leave a review, while those who felt indifferent or uninterested might choose not to go through the hassle to leave a review on the recipe. This behavior is not directly captured in the data but could influence the missingness in the `review` column. 
+
+To make the missingness in `review` potentially **Missing At Random (MAR)**, we could collect additional data about user behavior and experiences, such as
+1. The reason for not submitting a rewview (e.g., "forgot," "not satisfied," "recipe incomplete").
+2. Whether users opened or viewed the recipe multiple times but did not interact further.
 
 ### Missingness Dependency
 
