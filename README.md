@@ -70,7 +70,7 @@ Cleaning the data was a crucial step in ensuring the quality and reliability of 
 		- Effect: Provided the target variable for modeling and analysis.
 	- `'protein prop'`
 		- Process: Calculated the proportion of calories derived from protein.
-		- Effect: Enabled us to focus on high-protein recipes in alignment with my central question.
+		- Effect: Enabled me to focus on high-protein recipes in alignment with my central question.
 	- `'high in protein'`
 		- Process: Created a binary indicator for recipes where more than 30% of calories came from protein.
 		- Effect: Allowed for easy grouping of recipes into "high-protein" and "low-protein" categories.
@@ -128,7 +128,7 @@ In this table, we are examining the averages across various variables for the tw
 In our dataset, it is possible that the column `review` contains missing values that could be considered **Not Missing At Random (NMAR)**. Users who had an extremely negative or extremely positive experience with a recipe might be more likely to leave a review, while those who felt indifferent or uninterested might choose not to go through the hassle to leave a review on the recipe. This behavior is not directly captured in the data but could influence the missingness in the `review` column. 
 
 To make the missingness in `review` potentially **Missing At Random (MAR)**, we could collect additional data about user behavior and experiences, such as
-1. The reason for not submitting a rewview (e.g., "forgot," "not satisfied," "recipe incomplete").
+1. The reason for not submitting a review (e.g., "forgot," "not satisfied," "recipe incomplete").
 2. Whether users opened or viewed the recipe multiple times but did not interact further.
 
 ### Missingness Dependency
