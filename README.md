@@ -6,7 +6,7 @@ By Khoi Phan (k8phan@ucsd.edu)
 
 ## Introduction
 
-The world is rapidly transitioning towards an increasingly "online" state, where digital technologies are transforming how we communicate, conduct business, access information, and interact with services across various aspects of life. One of many aspect being food; it is apparent that food is becoming a mainstream topic that society is constantly discussing about, either for fitness/health purposes or for hobbies like cooking and social media content creation.
+The world is rapidly transitioning towards an increasingly "online" state, where digital technologies are transforming how we communicate, conduct business, access information, and interact with services across various aspects of life; one of many aspect being food. It is apparent that food is becoming a mainstream topic that society is constantly discussing about, either for fitness/health purposes or for hobbies like cooking and social media content creation.
 
 In this project, I will be focusing on two datasets relating to food recipes posted since 2008 on [food.com](https://www.food.com/). Specifically, I am trying to answer the question: **"How do the nutritional characteristics of a recipe, specifically its protein content, impact its average user rating?"**
 
@@ -133,7 +133,7 @@ To make the missingness in `'review'` potentially **Missing At Random (MAR)**, w
 
 ### Missingness Dependency
 
-Another column in the dataset that contains non-trivial missingness is `'rating'`, so I tested the dependency of the missingness of this column on other columns. Specifically, I will investigate whether the missiness in the `'rating'` column depends on the column `'protein prop'` or the column `'prep time'`.
+Another column in the dataset that contains non-trivial missingness is `'rating'`, so I tested the dependency of the missingness of this column on other columns. Specifically, I am investigate whether the missiness in the `'rating'` column depends on the column `'protein prop'` or the column `'prep time'`.
 
 > Dependency of the missingness of `'rating'` on `'protein prop'`
 
@@ -224,7 +224,7 @@ Since the p-value that the permutation test computed is **0.126**, we **fail to 
 ## Baseline Model
 
 **Model Description**
-For the baseline model, I build a linear regression model to predict the average recipe rating (`'avg rating'`) using two features. It was trained on 80% of the data and evaluated on the remaining 20% using the R² score. The two features are:
+For the baseline model, I built a linear regression model to predict the average recipe rating (`'avg rating'`) using two features. It was trained on 80% of the data and evaluated on the remaining 20% using the R² score. The two features are:
 1. `'prep time'` (Quantitative): The time required to prepare the recipe, measured in minutes.
 2. `'n_ingredients'` (Quantitative): The total number of ingredients used in the recipe.
 
