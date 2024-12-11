@@ -154,7 +154,7 @@ Another column in the dataset that contains non-trivial missingness is `'rating'
   frameborder="0"
 ></iframe>
 
-The p-value that the permutation test computed is **0.00**. It indicates a significant dependency between the missingness of the `'rating'` column and the `'protein prop'` column. This suggests that recipes with missing ratings have systematically different protein proportions compared to recipes with available ratings, which implies that missing ratings may be Missing At Random (MAR) with respect to protein proportions
+Since the p-value that the permutation test computed is **0.00**, we can reject the null hypothesis. This indicates a significant dependency between the missingness of the `'rating'` column and the `'protein prop'` column. It suggests that recipes with missing ratings have systematically different protein proportions compared to recipes with available ratings, which implies that missing ratings may be **Missing At Random (MAR)** with respect to protein proportions.
 
 > Dependency of the missingness of `'rating'` on `'prep time'`
 
@@ -167,6 +167,13 @@ The p-value that the permutation test computed is **0.00**. It indicates a signi
 **Significance Level:** 0.05
 
 **Permutation procedure:** Randomly shuffled the missingness of the `'rating'` column 1,000 times to simulate the null hypothesis where missingness is unrelated to the `'prep time'` column.
+
+<iframe
+  src="assets/time_prop.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 
 ---
