@@ -133,9 +133,9 @@ To make the missingness in `'review'` potentially **Missing At Random (MAR)**, w
 
 ### Missingness Dependency
 
-Another column in the dataset that contains non-trivial missingness is `'rating'`, so I tested the dependency of the missingness of this column on other columns. Specifically, I will investigate whether the missiness in the `'rating'` column depends on the column `'protein prop'` or the column `'prep time'`, which is the number of steps of the recipe.
+Another column in the dataset that contains non-trivial missingness is `'rating'`, so I tested the dependency of the missingness of this column on other columns. Specifically, I will investigate whether the missiness in the `'rating'` column depends on the column `'protein prop'` or the column `'prep time'`.
 
-> Dependency of missing `'rating'` on `'protein prop'`
+> Dependency of the missingness of `'rating'` on `'protein prop'`
 
 **Null Hypothesis:** The missingness of the `'rating'` column does not depend on the `'protein prop'` column.
 
@@ -154,7 +154,9 @@ Another column in the dataset that contains non-trivial missingness is `'rating'
   frameborder="0"
 ></iframe>
 
-> Dependency of missing `'rating'` on `'prep time'`
+The p-value that the permutation test computed is **0.00**. It indicates a significant dependency between the missingness of the `'rating'` column and the `'protein prop'` column. This suggests that recipes with missing ratings have systematically different protein proportions compared to recipes with available ratings, which implies that missing ratings may be Missing At Random (MAR) with respect to protein proportions
+
+> Dependency of the missingness of `'rating'` on `'prep time'`
 
 **Null Hypothesis:** The missingness of the `'rating'` column does not depend on the `'prep time'` column.
 
