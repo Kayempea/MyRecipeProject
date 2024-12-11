@@ -147,6 +147,12 @@ Another column in the dataset that contains non-trivial missingness is `'rating'
 
 **Permutation procedure:** Randomly shuffled the missingness of the `'rating'` column 1,000 times to simulate the null hypothesis where missingness is unrelated to the `'protein prop'` column.
 
+<iframe
+  src="assets/protein_prop.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 > Dependency of missing `'rating'` on `'prep time'`
 
