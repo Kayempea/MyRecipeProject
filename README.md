@@ -179,8 +179,47 @@ Since the p-value that the permutation test computed is **0.126**, we **fail to 
 
 ---
 ## Hypothesis Testing
+
+**Hypotheses:**
+- Null Hypothesis (H₀): High-protein recipes and low-protein recipes receive the same ratings (the distribution of ratings is the same for both groups).
+- Alternative Hypothesis (H₁): High-protein recipes receive higher ratings than low-protein recipes (the mean of high-protein recipes is greater).
+
+**Test Statistic:** The difference in means between high-protein and low-protein recipes.
+- This choice is appropriate because it directly measures the specific aspect of the distributions we are interested in (the average rating difference).
+
+**Significance Level:** 0.05
+
+**Results:**
+- Observed Difference in Means: -0.024
+	- This indicates that on average, low-protein recipes received slightly higher ratings than high-protein recipes.
+- P-value: 0.0
+	- Indicating that it is highly unlikely to observe this difference or a more extreme one under the null hypothesis.
+
+**Conclusion:**
+- Since the p-value is less than 0.05, we reject the null hypothesis. This suggests that high-protein recipes receive significantly different ratings compared to low-protein recipes. However, the observed difference was negative, meaning high-protein recipes might receive lower ratings on average.
+
+**Justification of Choices:**
+- Difference in Means: The test statistic was chosen because it aligns with our question about the average rating difference between the two groups.
+- Permutation Test: By shuffling the group labels and recalculating the test statistic, we avoid assumptions about the data's underlying distribution.
+- Significance Level: Setting α at 0.05 is a common and reasonable threshold for determining statistical significance in exploratory analyses like this.
+
 ---
 ## Framing a Prediction Problem
+
+**Prediction Problem and Type**
+- The task is to predict the average rating of recipes based on their attributes. This is a regression problem since the response variable is continuous.
+
+**Response Variable**
+- The response variable is the `'avg rating'` column, representing the average rating of a recipe based on user feedback. This variable was chosen because understanding and predicting recipe ratings can provide insights into what factors contribute to highly rated recipes, which is valuable for both recipe creators and platforms hosting these recipes.
+
+**Evaluation Metric**
+- I chose the R² score (coefficient of determination) to evaluate the model's performance.
+
+- While metrics like RMSE (Root Mean Squared Error) are useful for quantifying prediction error, R² is more interpretable in this context. It directly communicates the model's explanatory power, making it easier to assess its usefulness in predicting recipe ratings. It provides a clear measure of how much variance in the response variable is explained by the model. This is crucial in regression tasks, as it shows how well the model fits the data.
+
+**Available Information**
+- The information I would know at the time of prediction are the features in the `'recipes'` dataset. Those columns are features of the recipes on the website and it does not give any extra knowledge to what the rating for that recipe is at the time of prediction.
+
 ---
 ## Baseline Model
 ---
