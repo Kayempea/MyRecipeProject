@@ -224,6 +224,7 @@ Since the p-value that the permutation test computed is **0.126**, we **fail to 
 ## Baseline Model
 
 **Model Description**
+
 For the baseline model, I built a linear regression model to predict the average recipe rating (`'avg rating'`) using two features. It was trained on 80% of the data and evaluated on the remaining 20% using the R² score. The two features are:
 1. `'prep time'` (Quantitative): The time required to prepare the recipe, measured in minutes.
 2. `'n_ingredients'` (Quantitative): The total number of ingredients used in the recipe.
@@ -233,11 +234,30 @@ For the baseline model, I built a linear regression model to predict the average
 - Standardization: The features were scaled to have a mean of 0 and a standard deviation of 1 using StandardScaler. This step ensures that all features contribute equally to the linear regression model, avoiding bias due to differing scales.
 
 **Performance**
-- The model achieved an R² score on the test set of -0.000136389006294646.
+- The model achieved an R² score on the test set of -0.00014
 - The R² score measures how well the model explains the variance in the target variable. Since the R² score is low, this indicates the baseline model is not capturing much of the variance in the target variable. Additionaly, R² is negative only when the chosen model does not follow the trend of the data, so the model fits worse than a horizontal line. Indicating that the model need major improvements.
 
 ---
 ## Final Model
+
+**New Features Added**
+
+For the final model, I added two new features in addition to the two features used in the baseline model (`'prep time'`, '`n_ingredients'`):
+1. `'high in protein'` (Categorical): This feature indicates whether the recipe is high in protein. This feature is important because recipes with higher protein content may have different ratings compared to low-protein recipes. For instance, people who are focused on protein-rich diets might rate high-protein recipes more favorably. Including this feature enables the model to account for potential differences in ratings based on nutritional content.
+
+2. `'calories'` (Quantitative): The total number of calories in a recipe is another important feature because people may rate recipes differently based on their calorie content, particularly if they are calorie-conscious. Including this feature allows the model to capture any patterns related to calories that might influence recipe ratings.
+
+**Model and Hyperparameters**
+
+I chose to use a `Random Forest Regressor` to build my final model and decided to tune the `max_depth` and `n_estimators` hyperparameters. To select the best performing hyperparameters, I conducted `GridSearchcv` to tune the hyperparameters and found that the best combination between these two hyperparameters are:
+- `max_depth`: 20
+- `n_estimators`: 150
+
+**Improved Performance**
+
+Including the additional features `'high in protein'` and `'calories'`, and used a Random Forest Regressor with hyperparameter tuning, the final model achieved an R² score of 0.227 on the test set. This is a substantial improvement over the baseline model, indicating that the final model is better at capturing the underlying patterns in the data and making more accurate predictions.
+
+
 ---
 ## Fairness Analysis
 ---
