@@ -222,6 +222,20 @@ Since the p-value that the permutation test computed is **0.126**, we **fail to 
 
 ---
 ## Baseline Model
+
+**Model Description**
+For the baseline model, I build a linear regression model to predict the average recipe rating (`'avg rating'`) using two features. It was trained on 80% of the data and evaluated on the remaining 20% using the R² score. The two features are:
+1. `'prep time'` (Quantitative): The time required to prepare the recipe, measured in minutes.
+2. `'n_ingredients'` (Quantitative): The total number of ingredients used in the recipe.
+
+**Data Preprocessing**
+- Imputation: Missing values in the features were replaced with the mean of the respective column using SimpleImputer.
+- Standardization: The features were scaled to have a mean of 0 and a standard deviation of 1 using StandardScaler. This step ensures that all features contribute equally to the linear regression model, avoiding bias due to differing scales.
+
+**Performance**
+- The model achieved an R² score on the test set of -0.000136389006294646.
+- The R² score measures how well the model explains the variance in the target variable. Since the R² score is low, this indicates the baseline model is not capturing much of the variance in the target variable. Additionaly, R² is negative only when the chosen model does not follow the trend of the data, so the model fits worse than a horizontal line. Indicating that the model need major improvements.
+
 ---
 ## Final Model
 ---
