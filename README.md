@@ -137,15 +137,15 @@ Another column in the dataset that contains non-trivial missingness is `'rating'
 
 > Dependency of the missingness of `'rating'` on `'protein prop'`
 
-**Null Hypothesis:** The missingness of the `'rating'` column does not depend on the `'protein prop'` column.
-
-**Alternate Hypothesis:** The missingness of the `'rating'` column does depend on the `'protein prop'` column.
+**Hypotheses**
+- Null Hypothesis: The missingness of the `'rating'` column does not depend on the `'protein prop'` column.
+- Alternate Hypothesis: The missingness of the `'rating'` column does depend on the `'protein prop'` column.
 
 **Test Statistic:** The absolute difference in the mean of `'protein prop'` between rows with and without missing ratings.
 
 **Significance Level:** 0.05
 
-**Permutation procedure:** Randomly shuffled the missingness of the `'rating'` column 1,000 times to simulate the null hypothesis where missingness is unrelated to the `'protein prop'` column.
+**Permutation Procedure:** Randomly shuffled the missingness of the `'rating'` column 1,000 times to simulate the null hypothesis where missingness is unrelated to the `'protein prop'` column.
 
 <iframe
   src="assets/protein_prop.html"
@@ -158,15 +158,15 @@ Since the p-value that the permutation test computed is **0.00**, we can **rejec
 
 > Dependency of the missingness of `'rating'` on `'prep time'`
 
-**Null Hypothesis:** The missingness of the `'rating'` column does not depend on the `'prep time'` column.
-
-**Alternate Hypothesis:** The missingness of the `'rating'` column does depend on the `'prep time'` column.
+**Hypotheses**
+- Null Hypothesis: The missingness of the `'rating'` column does not depend on the `'prep time'` column.
+- Alternate Hypothesis: The missingness of the `'rating'` column does depend on the `'prep time'` column.
 
 **Test Statistic:** The absolute difference in the mean of `'prep time'` between rows with and without missing ratings.
 
 **Significance Level:** 0.05
 
-**Permutation procedure:** Randomly shuffled the missingness of the `'rating'` column 1,000 times to simulate the null hypothesis where missingness is unrelated to the `'prep time'` column.
+**Permutation Procedure:** Randomly shuffled the missingness of the `'rating'` column 1,000 times to simulate the null hypothesis where missingness is unrelated to the `'prep time'` column.
 
 <iframe
   src="assets/time_prop.html"
@@ -199,9 +199,9 @@ Since the p-value that the permutation test computed is **0.126**, we **fail to 
 - Since the p-value is less than 0.05, we reject the null hypothesis. This suggests that high-protein recipes receive significantly different ratings compared to low-protein recipes. However, the observed difference was negative, meaning high-protein recipes might receive lower ratings on average.
 
 **Justification of Choices:**
-- Difference in Means: The test statistic was chosen because it aligns with our question about the average rating difference between the two groups.
-- Permutation Test: By shuffling the group labels and recalculating the test statistic, we avoid assumptions about the data's underlying distribution.
-- Significance Level: Setting α at 0.05 is a common and reasonable threshold for determining statistical significance in exploratory analyses like this.
+- Difference in means: The test statistic was chosen because it aligns with our question about the average rating difference between the two groups.
+- Permutation test: By shuffling the group labels and recalculating the test statistic, we avoid assumptions about the data's underlying distribution.
+- Significance level: Setting α at 0.05 is a common and reasonable threshold for determining statistical significance in exploratory analyses like this.
 
 ---
 ## Framing a Prediction Problem
@@ -255,9 +255,27 @@ I chose to use a `Random Forest Regressor` to build my final model and decided t
 
 **Improved Performance**
 
-Including the additional features `'high in protein'` and `'calories'`, and used a Random Forest Regressor with hyperparameter tuning, the final model achieved an R² score of 0.227 on the test set. This is a substantial improvement over the baseline model, indicating that the final model is better at capturing the underlying patterns in the data and making more accurate predictions.
-
+- Including the additional features `'high in protein'` and `'calories'`, and used a Random Forest Regressor with hyperparameter tuning, the final model achieved an R² score of 0.227 on the test set. This is a substantial improvement over the baseline model, indicating that the final model is better at capturing the underlying patterns in the data and making more accurate predictions.
 
 ---
 ## Fairness Analysis
+
+**Groups** 
+
+For my fairness analysis, I will split the data into two groups:
+1. Group X (High-Protein Recipes): This group consists of recipes that are classified as high in protein, based on the column `'high in protein'`.
+2. Group Y (Low-Protein Recipes): This group consists of recipes that are classified as low in protein, based on the column `'high in protein'`.
+
+**Evaluation Metric:**  R² 
+
+**Hypotheses**
+- Null Hypothesis (H₀): There is no significant difference in model performance (R² score) for high-protein recipes (Group X) and low-protein recipes (Group Y). Any observed difference is due to random chance.
+- Alternative Hypothesis (H₁): There is a significant difference in model performance (R² score) for high-protein recipes (Group X) and low-protein recipes (Group Y), with one group having a lower R² score than the other.
+
+**Test Statistic:** The absolute difference in R² 
+
+**Significance Level**: 0.05
+
+
+
 ---
