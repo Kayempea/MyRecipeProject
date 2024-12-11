@@ -276,6 +276,9 @@ For my fairness analysis, I will split the data into two groups:
 
 **Significance Level**: 0.05
 
+**Result and Conclusion**
 
+- I used a permutation test to assess the significance of the observed difference in R² scores between the two groups and the resulting p-value is **0.984**.
+- Since the p-value is much greater than the significance level of 0.05, we **fail to reject** the null hypothesis. Indicating that there is no significant difference in model performance between high-protein recipes and low-protein recipes.
 
 ---
