@@ -125,13 +125,41 @@ In this table, we are examining the averages across various variables for the tw
 
 ### NMAR Analysis
 
-In our dataset, it is possible that the column `review` contains missing values that could be considered **Not Missing At Random (NMAR)**. Users who had an extremely negative or extremely positive experience with a recipe might be more likely to leave a review, while those who felt indifferent or uninterested might choose not to go through the hassle to leave a review on the recipe. This behavior is not directly captured in the data but could influence the missingness in the `review` column. 
+In our dataset, it is possible that the column `'review'` contains missing values that could be considered **Not Missing At Random (NMAR)**. Users who had an extremely negative or extremely positive experience with a recipe might be more likely to leave a review, while those who felt indifferent or uninterested might choose not to go through the hassle to leave a review on the recipe. This behavior is not directly captured in the data but could influence the missingness in the `'review'` column. 
 
-To make the missingness in `review` potentially **Missing At Random (MAR)**, we could collect additional data about user behavior and experiences, such as
+To make the missingness in `'review'` potentially **Missing At Random (MAR)**, we could collect additional data about user behavior and experiences, such as
 1. The reason for not submitting a review (e.g., "forgot," "not satisfied," "recipe incomplete").
 2. Whether users opened or viewed the recipe multiple times but did not interact further.
 
 ### Missingness Dependency
+
+Another column in the dataset that contains non-trivial missingness is `'rating'`, so I tested the dependency of the missingness of this column on other columns. Specifically, I will investigate whether the missiness in the `'rating'` column depends on the column `'protein prop'` or the column `'prep time'`, which is the number of steps of the recipe.
+
+> Dependency of missing `'rating'` on `'protein prop'`
+
+**Null Hypothesis:** The missingness of the `'rating'` column does not depend on the `'protein prop'` column.
+
+**Alternate Hypothesis:** The missingness of the `'rating'` column does depend on the `'protein prop'` column.
+
+**Test Statistic:** The absolute difference in the mean of `'protein prop'` between rows with and without missing ratings.
+
+**Significance Level:** 0.05
+
+**Permutation procedure:** Randomly shuffled the missingness of the `'rating'` column 1,000 times to simulate the null hypothesis where missingness is unrelated to the `'protein prop'` column.
+
+
+> Dependency of missing `'rating'` on `'prep time'`
+
+**Null Hypothesis:** The missingness of the `'rating'` column does not depend on the `'prep time'` column.
+
+**Alternate Hypothesis:** The missingness of the `'rating'` column does depend on the `'prep time'` column.
+
+**Test Statistic:** The absolute difference in the mean of `'prep time'` between rows with and without missing ratings.
+
+**Significance Level:** 0.05
+
+**Permutation procedure:** Randomly shuffled the missingness of the `'rating'` column 1,000 times to simulate the null hypothesis where missingness is unrelated to the `'prep time'` column.
+
 
 ---
 ## Hypothesis Testing
